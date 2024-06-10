@@ -19,7 +19,7 @@ const Home = () => {
   const [contact, setContact] = useState(false);
 
   return (
-    <div className="w-full lgl:w-[95%] h-full lgl:h-[85%] bg-transparent text-white z-50 flex items-start justify-between p-4 lgl:p-0">
+    <div className="w-full lgl:w-[95%] h-full lgl:h-[85%] bg-transparent text-white z-50 flex items-start justify-between py-6 px-8 lgl:p-0">
       {/* ================= Left Icons End here ======================== */}
       <div className="w-44 h-96 bg-transparent hidden lgl:flex flex-col gap-4 mr-4 mt-48">
         {/* ======= SIDE NAV START*/}
