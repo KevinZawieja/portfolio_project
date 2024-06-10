@@ -1,83 +1,85 @@
-/* Cool infinite background scrolling animation.
- * Twitter: @kootoopas
- */
-
-/* Exo thin font from Google. */
-@import url(https://fonts.googleapis.com/css?family=Exo:100);
-
-/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
-$bg-url: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC";
-$bg-width: 50px;
-$bg-height: 50px;
-
-/* Animations */
-@-webkit-keyframes bg-scrolling-reverse {
-  100% {
-    background-position: $bg-width $bg-height;
-  }
-}
-@-moz-keyframes bg-scrolling-reverse {
-  100% {
-    background-position: $bg-width $bg-height;
-  }
-}
-@-o-keyframes bg-scrolling-reverse {
-  100% {
-    background-position: $bg-width $bg-height;
-  }
-}
-@keyframes bg-scrolling-reverse {
-  100% {
-    background-position: $bg-width $bg-height;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
 }
 
-@-webkit-keyframes bg-scrolling {
-  0% {
-    background-position: $bg-width $bg-height;
-  }
-}
-@-moz-keyframes bg-scrolling {
-  0% {
-    background-position: $bg-width $bg-height;
-  }
-}
-@-o-keyframes bg-scrolling {
-  0% {
-    background-position: $bg-width $bg-height;
-  }
-}
-@keyframes bg-scrolling {
-  0% {
-    background-position: $bg-width $bg-height;
-  }
+html, body {
+  height: 100%;
 }
 
 
-.my-id {
-  position: relative;
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  width: 90vw;
+}
+
+.line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: transparent;
   overflow: hidden;
 
-  /* img size is 50x50 */
-  background: transparent url($bg-url) repeat 0 0;
+  &:nth-child(1) {
+    margin-left: -50%;
 
-  -webkit-animation: bg-scrolling-reverse 4s infinite; /* Safari 4+ */
-  -moz-animation: bg-scrolling-reverse 4s infinite; /* Fx 5+ */
-  -o-animation: bg-scrolling-reverse 4s infinite; /* Opera 12+ */
-  animation: bg-scrolling-reverse 4s infinite; /* IE 10+ */
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  -o-animation-timing-function: linear;
-  animation-timing-function: linear;
+   
+  }
+
+  &:nth-child(2) {
+    margin-left: 45%;
+   
+  }
+
+  &:nth-child(3) {
+    margin-left: 47%;
+
   
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #081d3d; /* Change this to your desired color */
-    opacity: 0.85; /* Adjust this to change the intensity of the color */
+  }
+
+  &:nth-child(4) {
+    margin-left: 49%;
+
+  
+  }
+
+  &:nth-child(5) {
+    margin-left: -52%;
+
+   
+  }
+  &:nth-child(6) {
+    margin-left: -54%;
+
+   
+  }
+}
+
+.drop {
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #9cc0dc 75%, #9cc0dc 100%);
+  animation: drop 7s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+@keyframes drop {
+  0% {
+    top: -30%;
+  }
+  100% {
+    top: 115%;
   }
 }

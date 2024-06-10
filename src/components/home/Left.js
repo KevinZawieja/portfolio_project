@@ -11,7 +11,7 @@ const Left = () => {
     words: [
       "Haw Student",
       "Bachelor of Science - Angewandte Informatik",
-      "Front-End & Back-End",
+      "Fullstack-Entwickler",
     ],
     loop: true,
     typeSpeed: 30,

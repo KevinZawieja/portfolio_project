@@ -19,6 +19,7 @@ module.exports = {
       },
       colors: {
         bodyColor: "#212428",
+        backgroundColor: "#1f1d1d",
         textColor: "rgba(255, 255, 255, 0.85)",
         designColor: "#6991c5", // #9cc0dc #113e8b #004e95 #4666a3
         titleRoundBg:
