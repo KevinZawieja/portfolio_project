@@ -1,6 +1,6 @@
 import React from "react";
 import { FaAppStoreIos } from "react-icons/fa";
-import { AiTwotoneAppstore } from "react-icons/ai";
+import { AiOutlineDatabase } from "react-icons/ai";
 import { SiAntdesign } from "react-icons/si";
 import { BiCodeAlt } from "react-icons/bi";
 import ServicesCard from "./ServicesCard";
@@ -9,24 +9,24 @@ const MyServices = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2">
       <ServicesCard
-        icons={<BiCodeAlt />}
-        title="Web Development"
-        subTitle="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, provident. Accusamus at dolorem expedita dicta."
+        icons={<AiOutlineDatabase />}
+        title="API's & Librarys"
+        subTitle="Erfahrungen mit Erkennen von Datenstrukturen und Extrahierung von Daten aus API's sowie Einarbeitung in neue Librarys und Frameworks."
       />
       <ServicesCard
         icons={<SiAntdesign />}
-        title="Web Design"
-        subTitle="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, provident. Accusamus at dolorem expedita dicta."
+        title="GUI Design"
+        subTitle="Kenntnisse in der Gestaltung benutzerfreundlicher und ästhetisch ansprechender Oberflächen, um eine optimale User Experience zu gewährleisten."
       />
       <ServicesCard
-        icons={<AiTwotoneAppstore />}
-        title="Mobile Application"
-        subTitle="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, provident. Accusamus at dolorem expedita dicta."
+        icons={<BiCodeAlt />}
+        title="Web Development & Datenbanken"
+        subTitle="Erfahrung in der Entwicklung von modernen Webanwendungen mit Java und React, einschließlich der Integration und Verwaltung von Datenbanken (SQL und NoSQL)."
       />
       <ServicesCard
         icons={<FaAppStoreIos />}
-        title="SEO"
-        subTitle="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, provident. Accusamus at dolorem expedita dicta."
+        title="Projektmanagement-Tools"
+        subTitle="Erfahrung in der Anwendung von Jira und Azure DevOps zur Unterstützung agiler Methoden wie Scrum & Kanban und die damit verbundene eigenverantwortliche Organisation und Verwaltung von Projekten."
       />
     </div>
   );
