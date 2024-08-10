@@ -1,27 +1,28 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaUser, FaEnvelope } from "react-icons/fa";
-import { IoIosPaper } from "react-icons/io";
+//import { IoIosPaper } from "react-icons/io";
 import { MdWork, MdOutlineClose } from "react-icons/md";
-import { SiGooglechat } from "react-icons/si";
+//import { SiGooglechat } from "react-icons/si";
 import Left from "./components/home/Left";
 import About from "./components/about/About";
-import Resume from "./components/resume/Resume";
+//import Resume from "./components/resume/Resume";
 import Projects from "./components/projects/Projects";
-import Blog from "./components/blog/Blog";
-import Contact from "./components/contact/Contact";
+//import Blog from "./components/blog/Blog";
+//import Contact from "./components/contact/Contact";
 
 const Home = () => {
   const [about, setAbout] = useState(true);
-  const [resume, setResume] = useState(false);
+  // const [resume, setResume] = useState(false);
   const [projects, setProjects] = useState(false);
-  const [blog, setBlog] = useState(false);
-  const [contact, setContact] = useState(false);
+  // const [blog, setBlog] = useState(false);
+  // const [contact, setContact] = useState(false);
 
   return (
     <div className="w-full lgl:w-[95%] h-full lgl:h-[85%] bg-transparent text-white z-50 flex items-start justify-between py-6 px-8 lgl:p-0">
       {/* ================= Left Icons End here ======================== */}
-      <div className="w-44 h-96 bg-transparent hidden lgl:flex flex-col gap-4 mr-4 mt-48">
+      {/* h-96 */}
+      <div className="w-44 h-28 bg-transparent hidden lgl:flex flex-col gap-4 mr-4 mt-48">
         {/* ======= SIDE NAV START*/}
         {/* <div className="w-full h-20 bg-bodyColor rounded-3xl flex justify-center items-center cursor-pointer group">
           <div className="flex flex-col gap-1.5 overflow-hidden">
@@ -35,13 +36,7 @@ const Home = () => {
         <div className="w-full h-80 bg-bodyColor rounded-2xl flex flex-col items-center justify-between py-4">
           {/* About Icon */}
           <span
-            onClick={() =>
-              setAbout(true) &
-              setResume(false) &
-              setProjects(false) &
-              setBlog(false) &
-              setContact(false)
-            }
+            onClick={() => setAbout(true) & setProjects(false)}
             className={`${
               about
                 ? "w-3/4 h-6 text-designColor text-xl flex items-start duration-300 cursor-pointer relative group"
@@ -60,14 +55,8 @@ const Home = () => {
             </span>
           </span>
           {/* Resume Icon */}
-          <span
-            onClick={() =>
-              setAbout(false) &
-              setResume(true) &
-              setProjects(false) &
-              setBlog(false) &
-              setContact(false)
-            }
+          {/* <span
+            onClick={() => setAbout(false) & setProjects(false)}
             className={`${
               resume
                 ? "w-3/4 h-6 text-designColor text-xl flex items-start duration-300 cursor-pointer relative group"
@@ -85,16 +74,10 @@ const Home = () => {
               {" "}
               Lebenslauf
             </span>
-          </span>
+          </span>*/}
           {/* Project Icon */}
           <span
-            onClick={() =>
-              setAbout(false) &
-              setResume(false) &
-              setProjects(true) &
-              setBlog(false) &
-              setContact(false)
-            }
+            onClick={() => setAbout(false) & setProjects(true)}
             className={`${
               projects
                 ? "w-3/4 h-6 text-designColor text-xl flex items-start duration-300 cursor-pointer relative group"
@@ -114,7 +97,7 @@ const Home = () => {
             </span>
           </span>
           {/* Blog Icon */}
-          <span
+          {/* <span
             onClick={() =>
               setAbout(false) &
               setResume(false) &
@@ -127,8 +110,8 @@ const Home = () => {
                 ? "w-3/4 h-6 text-designColor text-xl flex items-start duration-300 cursor-pointer relative group"
                 : "w-3/4 h-6 text-xl flex items-start text-textColor hover:text-designColor duration-300 cursor-pointer relative group"
             }`}
-          >
-            <SiGooglechat />
+          >*/}
+          {/* <SiGooglechat />
             <span
               className={`${
                 blog
@@ -139,9 +122,10 @@ const Home = () => {
               {" "}
               Freizeit
             </span>
-          </span>
+          </span>*/}
+
           {/* Contact Icon */}
-          <span
+          {/*<span
             onClick={() =>
               setAbout(false) &
               setResume(false) &
@@ -154,8 +138,8 @@ const Home = () => {
                 ? "w-3/4 h-6 text-designColor text-xl flex items-start duration-300 cursor-pointer relative group"
                 : "w-3/4 h-6 text-xl flex items-start text-textColor hover:text-designColor duration-300 cursor-pointer relative group"
             }`}
-          >
-            <FaEnvelope />
+          >*/}
+          {/* <FaEnvelope />
             <span
               className={`${
                 contact
@@ -166,7 +150,7 @@ const Home = () => {
               {" "}
               Kontakt
             </span>
-          </span>
+          </span>*/}
         </div>
         {/* ======= Other Icons End */}
       </div>
@@ -179,10 +163,10 @@ const Home = () => {
           {/* ======================== Smaller device content Start ======================== */}
           <div className="w-full h-full lgl:hidden bg-transparent rounded-2xl flex flex-col gap-6">
             <About />
-            <Resume />
+            {/*<Resume />*/}
             <Projects />
-            <Blog />
-            <Contact />
+            {/* <Blog />*/}
+            {/*<Contact />*/}
           </div>
           {/* ======================== Smaller device content End ========================== */}
           <div className="w-full h-[96%] hidden lgl:flex justify-center overflow-y-scroll scrollbar-custom">
@@ -196,7 +180,7 @@ const Home = () => {
               </motion.div>
             )}
 
-            {resume && (
+            {/*{resume && (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -204,7 +188,7 @@ const Home = () => {
               >
                 <Resume />
               </motion.div>
-            )}
+            )}*/}
             {projects && (
               <motion.div
                 initial={{ opacity: 0 }}
@@ -214,7 +198,7 @@ const Home = () => {
                 <Projects />
               </motion.div>
             )}
-            {blog && (
+            {/* {blog && (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -222,8 +206,8 @@ const Home = () => {
               >
                 <Blog />
               </motion.div>
-            )}
-            {contact && (
+            )}*/}
+            {/* {contact && (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -231,7 +215,7 @@ const Home = () => {
               >
                 <Contact />
               </motion.div>
-            )}
+            )}*/}
           </div>
         </div>
       </div>

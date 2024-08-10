@@ -19,46 +19,23 @@ const Projects = () => {
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 lgl:gap-10">
         <div className="px-6">
           <ProjectsCard
-            title="Blog Website"
+            title="Firmenpräsentation"
             category="Website"
             image={workImgThree}
+            link="https://freschcleaning.vercel.app"
           />
           <ProjectsCard
-            title="Business Card Design"
-            category="Design"
-            image={workImgOne}
-          />
-          <ProjectsCard
-            title="Infinity Logo"
-            category="Logo"
+            title="Vier Gewinnt"
+            category="Künstliche Intelligenz"
             image={workImgTwo}
-          />
-          <ProjectsCard
-            title="Mobile Application"
-            category="Shopping"
-            image={workImgFive}
+            link="https://github.com/KevinZawieja/viergewinnt-manual"
           />
         </div>
         <div className="px-6">
           <ProjectsCard
-            title="Responsive website"
-            category="E-commerce"
+            title="Minigames"
+            category="Website Backend"
             image={workImgFour}
-          />
-          <ProjectsCard
-            title="Grapic Design"
-            category="Design"
-            image={workImgSix}
-          />
-          <ProjectsCard
-            title="Ideas & Blog"
-            category="Website"
-            image={workImgEight}
-          />
-          <ProjectsCard
-            title="ZOSS Logo"
-            category="Logo"
-            image={workImgSeven}
           />
         </div>
       </div>
